@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>User Name</title>
+    <meta
+      name="description"
+      content="Write a program that asks the user for their name and greets them with their name."
+    />
+    <meta name="author" content="Jordan Schneider" />
+  </head>
+
+  <body>
+    <div id="input">
+      <h1>What is your name?</h1>
+      <br />
+      <input type="text" id="userName" value="" />
+      <button onclick="helloWorld()">Enter</button>
+    </div>
+    <div id="output">
+      <p id="message"></p>
+    </div>
+
+    <script>
+      helloWorld = () => {
+        let userName = document.getElementById("userName").value;
+        console.log(userName);
+        checkName(userName);
+      };
+
+      checkName = (name) => {
+        if(name == "Alice" || name == "Bob") {
+          document.getElementById("message").innerHTML = `Hello ${name}!`;
+        } else {
+          document.getElementById("message").innerHTML = "Hmm, I don't recognize that name...";
+        }
+      }
+    </script>
+  </body>
+</html>
