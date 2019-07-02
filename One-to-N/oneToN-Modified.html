@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One to N</title>
+    <meta
+      name="description"
+      content="Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17"
+    />
+    <meta name="author" content="Jordan Schneider" />
+  </head>
+
+  <body>
+    <div id="input">
+      <h3>Enter a number:</h3>
+      <input type="number" id="n" />
+      <button onclick="printSum()">Enter</button>
+    </div>
+    <div id="output">
+      <p id="sum"></p>
+    </div>
+
+    <script>
+      printSum = () => {
+        let n = document.getElementById("n").value;
+        document.getElementById("sum").innerHTML = calcSum(n);
+      };
+
+      calcSum = num => {
+        let sum = 0;
+        for (let i = 0; i <= num; i++) {
+          if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+          }
+        }
+        return sum;
+      };
+    </script>
+  </body>
+</html>
