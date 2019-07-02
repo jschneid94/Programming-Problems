@@ -3,10 +3,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>User Name</title>
+    <title>User Name Modified</title>
     <meta
       name="description"
-      content="Write a program that asks the user for their name and greets them with their name."
+      content="Modify the previous program such that only the users Alice and Bob are greeted with their names."
     />
     <meta name="author" content="Jordan Schneider" />
   </head>
@@ -29,13 +29,14 @@
         checkName(userName);
       };
 
-      checkName = (name) => {
-        if(name == "Alice" || name == "Bob") {
+      checkName = name => {
+        if (name == "Alice" || name == "Bob") {
           document.getElementById("message").innerHTML = `Hello ${name}!`;
         } else {
-          document.getElementById("message").innerHTML = "Hmm, I don't recognize that name...";
+          document.getElementById("message").innerHTML =
+            "Hmm, I don't recognize that name...";
         }
-      }
+      };
     </script>
   </body>
 </html>

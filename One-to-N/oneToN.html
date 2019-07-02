@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One to N</title>
+    <meta
+      name="description"
+      content="Write a program that asks the user for a number n and prints the sum of the numbers 1 to n"
+    />
+    <meta name="author" content="Jordan Schneider" />
+  </head>
+
+  <body>
+    <div id="input">
+      <h3>Enter a number:</h3>
+      <input type="number" id="n" />
+      <button onclick="printSum()">Enter</button>
+    </div>
+    <div id="output">
+      <p id="sum"></p>
+    </div>
+
+    <script>
+      printSum = () => {
+        let n = document.getElementById("n").value;
+        document.getElementById("sum").innerHTML = calcSum(n);
+      };
+
+      calcSum = num => {
+        let sum = 0;
+        for (let i = 0; i <= num; i++) {
+          sum += i;
+          console.log(num);
+        }
+        return sum;
+      };
+    </script>
+  </body>
+</html>
