@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One to N</title>
+    <meta
+      name="description"
+      content="Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n."
+    />
+    <meta name="author" content="Jordan Schneider" />
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <h3>Enter a number:</h3>
+        <input type="number" id="n" />
+      </div>
+      <p>Choose to calculate the sum or the product of every number between 1 and the number you've enter above!</p>
+      <div>
+        <button onclick="calcSum()">Sum</button>
+        <button onclick="calcProduct()">Product</button>
+      </div>
+    </div>
+    <div>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      calcSum = () => {
+        let n = document.getElementById("n").value;
+        let sum = 0;
+        for (let i = 0; i <= n; i++) {
+          sum += i;
+          console.log(n);
+          document.getElementById("output").innerHTML = sum;
+        }
+      };
+      calcProduct = () => {
+        let n = document.getElementById("n").value;
+        let product = 1;
+        for (let i = 1; i <= n; i++) {
+          product *= i;
+          document.getElementById("output").innerHTML = product;
+        }
+      }
+    </script>
+  </body>
+</html>
