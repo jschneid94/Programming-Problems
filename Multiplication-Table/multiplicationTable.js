@@ -1,3 +1,5 @@
+// Write a program that prints a multiplication table for numbers up to 12.
+
 let result = "x";
 for (let i = 0; i < 11; i++) {
   for (let j = 0; j < 11; j++) {
