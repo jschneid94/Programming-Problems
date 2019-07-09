@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prime Numbers</title>
+    <meta
+      name="description"
+      content="Write a program that prints all prime numbers. (Note: if your programming language does not support arbitrary size numbers, printing all primes up to the largest number you can easily represent is fine too.)"
+    />
+    <meta name="author" content="Jordan Schneider" />
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <h3>Print how many prime numbers?</h3>
+        <input type="number" id="num" />
+      </div>
+      <div>
+        <button onclick="primeNumbers()">Enter</button>
+      </div>
+    </div>
+    <div>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      primeNumbers = () => {
+				let num = document.getElementById("num").value;
+        var primeNumbers = [];
+        for (var dividend = 2; primeNumbers.length < num; dividend++) {
+          var root = Math.sqrt(dividend);
+          var isprime = true;
+          for (var divisor = 2; divisor <= root; divisor++) {
+            if (dividend % divisor == 0) {
+              isprime = false;
+              break;
+            }
+          }
+          if (isprime) primeNumbers.push(dividend);
+        }
+        document.getElementById("output").innerHTML = primeNumbers.join();
+      }
+    </script>
+  </body>
+</html>
